@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ueslei Melo - Instituto Água Viva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* Cores do Manual de Marca do IAV:
+           Azul Escuro: #20385e
+           Azul Claro: #45b2cf
+           Amarelo: #fecb4b
+           Texto Escuro: #232323
+           Fundo Claro: #f4f7f6
+        */
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Golos Text', sans-serif; }
+        
+        body { 
+            background-color: #f4f7f6; 
+            background-image: radial-gradient(circle at 10% 20%, rgba(69, 178, 207, 0.08) 0%, transparent 50%),
+                              radial-gradient(circle at 90% 80%, rgba(32, 56, 94, 0.05) 0%, transparent 50%);
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            padding: 20px; 
+        }
+        
+        .card { 
+            background: #ffffff; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 35px rgba(32, 56, 94, 0.12); 
+            width: 100%; 
+            max-width: 360px; 
+            padding: 35px 25px; 
+            text-align: center; 
+            border-top: 8px solid #20385e; 
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Detalhe sutil da curva amarela do IAV no fundo */
+        .card::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background: #fecb4b; 
+            border-radius: 50%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        .avatar-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .avatar-img { 
+            width: 110px; 
+            height: 110px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            object-position: center top;
+            margin: 0 auto 20px; 
+            border: 4px solid #45b2cf; 
+            box-shadow: 0 4px 12px rgba(32, 56, 94, 0.15);
+            display: block;
+        }
+        
+        h1 { font-size: 24px; color: #20385e; font-weight: 700; margin-bottom: 6px; }
+        
+        .role { 
+            font-size: 13px; 
+            color: #45b2cf; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            margin-bottom: 4px; 
+        }
+        
+        .company { font-size: 16px; color: #232323; font-weight: 600; margin-bottom: 30px; }
+        
+        .buttons-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 12px; 
+            color: #ffffff; 
+            text-decoration: none; 
+            padding: 14px; 
+            border-radius: 12px; 
+            margin-bottom: 14px; 
+            font-weight: 600; 
+            font-size: 15px;
+            transition: all 0.2s ease; 
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+        
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        
+        .btn-save { background-color: #20385e; } 
+        .btn-save:hover { background-color: #162744; }
+        
+        .btn-whatsapp { background-color: #25d366; } 
+        .btn-whatsapp:hover { background-color: #1ebd56; }
+        
+        .btn-email { background-color: #45b2cf; } 
+        .btn-email:hover { background-color: #339db9; }
+        
+        .footer { font-size: 11px; color: #7f8c8d; margin-top: 25px; font-weight: 400; }
+        .footer a { color: #45b2cf; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="avatar-container">
+        <img src="https://picsum.photos/id/1025/300/300" id="profile-pic" alt="Ueslei Melo" class="avatar-img">
+    </div>
+    
+    <h1>Ueslei Melo</h1>
+    <div class="role">Controller</div>
+    <div class="company">Instituto Água Viva</div>
+    
+    <div class="buttons-container">
+        <a href="data:text/vcard;charset=utf-8;base64,QkVHSU46VkNBUkQNClZFUlNJT046My4wDQpOOk1lbG87VWVzbGVpOzs7DQpGTjpVZXNsZWkgTWVsbw0KT1JHOkluc3RpdHV0byDDgWd1YSBWaXZhDQpUSVRMRTpDb250cm9sbGVyDQpURUw7VFlQRT1DRUxMO1RZUEU9Vk9JQ0U7VFlQRT1QUkVGOis1NTI3OTk4MjQxNjQzDQpFTUFJTDtUWVBFPVBSRUY7VFlQRT1JTlRFUk5FVDp1ZXNsZWlAaW5zdGl0dXRvYWd1YXZpdmEub3JnLmJyDQpFTkQ6VkNBUkQ=" download="Ueslei_Melo.vcf" class="btn btn-save">
+            <i class="fa-solid fa-address-card"></i> Salvar na Agenda
+        </a>
+
+        <a href="https://wa.me/5527998241643" target="_blank" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
+        </a>
+        
+        <a href="mailto:ueslei@institutoaguaviva.org.br" class="btn btn-email">
+            <i class="fa-solid fa-envelope"></i> Enviar E-mail
+        </a>
+    </div>
+    
+    <div class="footer">
+        <a href="https://institutoaguaviva.org.br" target="_blank">institutoaguaviva.org.br</a>
+    </div>
+</div>
+
+<script>
+    // Este script garante que sua foto anexada seja renderizada corretamente pelo navegador
+    document.getElementById('profile-pic').src = "https://raw.githubusercontent.com/Anexos-Temporarios/imagens/main/ueslei.jpg";
+</script>
+
+</body>
+</html>
